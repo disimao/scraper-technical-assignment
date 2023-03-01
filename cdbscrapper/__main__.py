@@ -23,4 +23,3 @@ proc = subprocess.Popen(
 )
 output, err = proc.communicate()
 sys.stdout.write(output.decode())
-

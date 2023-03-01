@@ -26,7 +26,7 @@ class CdbspiderSpider(scrapy.Spider):
 
     def parse(self, response):
         output = {"logo": "", "phones": [], "website": ""}
-        redirected = response.request.meta.get('redirect_urls')
+        redirected = response.request.meta.get("redirect_urls")
         if redirected and len(redirected):
             output["website"] = redirected[0]
         else:
@@ -38,11 +38,17 @@ class CdbspiderSpider(scrapy.Spider):
             img_class = img.attrib.get("class", "").lower()
             if not img_url.startswith("http"):
                 img_url = "https:" + img_url
-            output["logo"] = img_url if img_url.find("logo") != -1 or img_class.find("logo") != 1 else ""
+            output["logo"] = (
+                img_url
+                if img_url.find("logo") != -1 or img_class.find("logo") != 1
+                else ""
+            )
 
-        body = "".join(response.css("body").xpath('//body//text()').extract())
+        body = "".join(response.css("body").xpath("//body//text()").extract())
         for m in phonenumbers.PhoneNumberMatcher(body, "US"):
-            f = phonenumbers.format_number(m.number, phonenumbers.PhoneNumberFormat.INTERNATIONAL)
+            f = phonenumbers.format_number(
+                m.number, phonenumbers.PhoneNumberFormat.INTERNATIONAL
+            )
             if f not in output["phones"]:
                 output["phones"].append(f)
 
