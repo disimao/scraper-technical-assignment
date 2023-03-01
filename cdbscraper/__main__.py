@@ -2,6 +2,7 @@ import pathlib
 import subprocess
 import sys
 
+
 if sys.stdin.isatty():
     raise Exception(
         (

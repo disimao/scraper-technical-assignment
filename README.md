@@ -14,11 +14,11 @@
 ## Requirements
 
 * [Framework Scrapy](cdbscraper/scrapy.cfg);
-* Static [Phisical] Scraper (Dynamic Scraper would require headless navigation);
-* [stdin](cdbscraper/__main__.py#L16) - [stdout](cdbscraper/cdbscraper/spiders/cdbspider.py#L55) - [stderr](cdbscraper/cdbscraper/settings.py#L20);
-* Coding header;
+* [Dynamic Scraper (Uses headless navigation)](cdbscraper/cdbscraper/settings.py#L112);
+* [stdin](cdbscraper/__main__.py#L17) - [stdout](cdbscraper/cdbscraper/spiders/cdbspider.py#L112) - [stderr](cdbscraper/cdbscraper/settings.py#L20);
+* [Coding header](cdbscraper/cdbscraper/spiders/cdbspider.py#L1);
 * [Python3](Dockerfile#L1);
 * [Dockerfile](Dockerfile);
-* Pep8 guidelines;
-* [Identify unique phone numbers](cdbscraper/cdbscraper/spiders/cdbspider.py#L52);
+* Pep8 guidelines (Formatted with ```$ black --line-length 79 *.py```);
+* [Identify unique phone numbers](cdbscraper/cdbscraper/spiders/cdbspider.py#L91);
 * [Code concurrent](cdbscraper/cdbscraper/settings.py#L38).
