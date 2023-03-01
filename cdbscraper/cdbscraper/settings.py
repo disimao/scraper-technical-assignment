@@ -1,4 +1,4 @@
-# Scrapy settings for cdbscrapper project
+# Scrapy settings for cdbscraper project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -22,20 +22,20 @@ logger = logging.getLogger()
 logger.addHandler(handler)
 
 
-BOT_NAME = "cdbscrapper"
+BOT_NAME = "cdbscraper"
 
-SPIDER_MODULES = ["cdbscrapper.spiders"]
-NEWSPIDER_MODULE = "cdbscrapper.spiders"
+SPIDER_MODULES = ["cdbscraper.spiders"]
+NEWSPIDER_MODULE = "cdbscraper.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-# USER_AGENT = "cdbscrapper (+http://www.yourdomain.com)"
+# USER_AGENT = "cdbscraper (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-# CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
@@ -60,13 +60,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 # SPIDER_MIDDLEWARES = {
-#    "cdbscrapper.middlewares.CdbscrapperSpiderMiddleware": 543,
+#    "cdbscraper.middlewares.CdbscraperSpiderMiddleware": 543,
 # }
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 # DOWNLOADER_MIDDLEWARES = {
-#    "cdbscrapper.middlewares.CdbscrapperDownloaderMiddleware": 543,
+#    "cdbscraper.middlewares.CdbscraperDownloaderMiddleware": 543,
 # }
 
 # Enable or disable extensions
@@ -78,7 +78,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 # ITEM_PIPELINES = {
-#    "cdbscrapper.pipelines.CdbscrapperPipeline": 100,
+#    "cdbscraper.pipelines.CdbscraperPipeline": 100,
 # }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

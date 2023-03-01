@@ -6,5 +6,5 @@
 import scrapy
 
 
-class CdbscrapperItem(scrapy.Item):
+class CdbscraperItem(scrapy.Item):
     pass

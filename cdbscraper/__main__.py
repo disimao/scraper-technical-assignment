@@ -7,7 +7,7 @@ if sys.stdin.isatty():
         (
             "Your command line is incorrect or input might be empty. "
             "Run with text file with newline-separated list of website URLs "
-            "as: cat websites.txt | python -m cdbscrapper"
+            "as: cat websites.txt | python -m cdbscraper"
         )
     )
 

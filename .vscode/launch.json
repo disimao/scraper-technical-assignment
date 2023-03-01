@@ -17,7 +17,7 @@
             ],
             "console": "internalConsole",
             "justMyCode": false,
-            "cwd": "${workspaceFolder}/cdbscrapper"
+            "cwd": "${workspaceFolder}/cdbscraper"
         }
     ]
 }

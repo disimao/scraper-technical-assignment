@@ -8,4 +8,4 @@ RUN mkdir /app
 WORKDIR /app
 COPY . /app/
 
-CMD [ "python", "-m", "cdbscrapper" ]
+CMD [ "python", "-m", "cdbscraper" ]
