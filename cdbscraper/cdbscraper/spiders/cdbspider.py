@@ -85,8 +85,13 @@ class CdbspiderSpider(scrapy.Spider):
         body = "".join(response.css("body").xpath("//body//text()").extract())
         phonenumbers_list = []
         for m in phonenumbers.PhoneNumberMatcher(body, country_code):
-            phone_str = phonenumbers.format_number(
-                m.number, phonenumbers.PhoneNumberFormat.INTERNATIONAL
+            phone_str = "".join(
+                [
+                    digit
+                    if digit in [" ", "+", "(", ")"] or digit.isdigit()
+                    else " "
+                    for digit in m.raw_string
+                ]
             )
             if phone_str not in phonenumbers_list:
                 phonenumbers_list.append(phone_str)
